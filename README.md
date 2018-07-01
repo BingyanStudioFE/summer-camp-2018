@@ -16,7 +16,7 @@
 |        Chrome         |      https://www.google.com/chrome/       |
 |        Postman        |        https://www.getpostman.com/        |
 |      学生大礼包       | https://github.com/ivmm/Student-resources |
-| github education pack |     https://education.github.com/pack     |
+| Github Education Pack |     https://education.github.com/pack     |
 
 ### 正确获取知识的姿势
 
@@ -55,7 +55,7 @@
 
 1. 任选其一：（千万不要浪费太多时间在这个地方，只需安装一个即可）
    - 世界级宝具：Visual Studio Code
-   - 开源级宝具：Atom
+   - 高冷级宝具：Atom
    - IDE 级宝具：WebStorm
    - 王の宝具：Vim | Emacs
 2. 了解并安装适当的插件
@@ -106,12 +106,14 @@
 3. 新建一个 `bingyan-summer-camp` 空仓库
 4. 添加 `README.md` 文件并写入 `Hello bingyan!` （大标题）
 
+**注：这步涉及到后面内容的代码控制，请一定完成好哦！以下所有涉及此仓库的代码记得当日 push**
+
 #### 任务奖励
 
 1. 经验值 `10 Exp`
 2. 愉快的对代码进行版本控制与管理了！
 
-#### 参考
+#### 参考资料
 
 [廖雪峰的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
@@ -121,45 +123,101 @@
 
 > 标记的力量
 
-推荐时长：`1` 天
+推荐时长：`0.5` 天
 
 #### 任务目标
 
-
-
-#### 任务奖励
-
-
-
-#### 参考
-
-### NodeJS
-
-推荐时长：`1` 天
-
-#### 任务目标
-
-
+1. 在 `bingyan-summer-camp` 下面分别创建目录 `html` 和 `css`
+2. 分别使用 google 搜索 html 和 css 教程
+3. 认真阅读并掌握 html 和 css 的用法
+4. **掌握理解 `flex` 布局**
+5. 产生相应的笔记写入 `html` 和 `css` 各自的 `note.md` 中
 
 #### 任务奖励
 
+1. 经验值 `15 Exp`
 
+#### 参考资料
 
-#### 参考
+[html](http://www.w3school.com.cn/html/)
 
+[css](http://www.w3school.com.cn/css/)
 
+[MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web)
 
-### BOSS 挑战
+#### BOSS 挑战
 
-
+空
 
 ## ①层：JavaScript 的天下
 
+### JavaScript 基础
 
+推荐时长：`1` 天
+
+#### 任务目标
+
+1. 学习并掌握基本的 JavaScript
+
+   包含同时不限于以下内容：
+
+   - 基本类型
+   - 常见的宿主环境及其全局对象
+   - JS 原型链机制
+   - JS 异步特性
+
+2. 同时产生学习笔记写入 `bingyan-summer-camp` 的 `js` 文件夹下的 `note.md` 中
+
+#### 任务奖励
+
+1. 经验值 `15 Exp`
+2. 进一步认识了 JS
+
+#### 参考资料
+
+[如何循序渐进、有效的学习 JS](https://www.zhihu.com/question/19713563)
+
+[JS 简易教程](http://yanhaijing.com/basejs/)
+
+[MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+
+扎实基础推荐书目：
+
+- JavaScript 高级程序设计
+- [YDKJS](https://github.com/getify/You-Dont-Know-JS)
+
+### Node.JS
+
+推荐时长：`0.5` 天
+
+#### 任务目标
+
+1. 了解 Node 的诞生和发展
+2. 安装 Node 最新 **LTS** 版，并尝试阅读 Node 文档
+3. 在 `bingyan-summer-camp` 的 `js` 目录下下创建 `node` 文件夹，同时在 `node` 文件夹下建立 `task1` 文件夹
+4. 在 `task1` 文件夹里使用 npm 命令，初始化 `package.json` 并安装 `colors` 包
+5. 新建 index.js 文件，使用 node.js 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
+
+#### 任务奖励
+
+1. 经验值 `10 Exp`
+2. 为了解后端做铺垫
+
+#### 参考资料
+
+[Node.JS 是干嘛的](https://www.zhihu.com/question/33578075)
+
+[Node.JS](https://nodejs.org/)
+
+[简易 Node.JS 教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000)
+
+[聊聊 Node.js 的历史](http://gitbook.cn/books/58e796fd09012f0a48761eae/index.html)
+
+[color 库](https://www.npmjs.com/package/colors)
 
 ### BOSS 挑战
 
-
+空
 
 ## ②层：初阶试炼
 
@@ -171,7 +229,7 @@
 
 ### BOSS 挑战
 
-
+空
 
 ## ④层：后端之旅
 
@@ -179,7 +237,7 @@
 
 ### BOSS 挑战
 
-
+空
 
 ## ⑤层：剑之试炼
 
@@ -187,7 +245,7 @@
 
 ### BOSS 挑战
 
-
+空
 
 ## Final：最终の战
 
