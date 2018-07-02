@@ -153,6 +153,8 @@
 
 ### JavaScript 基础
 
+> JavaScript 才是世界上最好的语言！Σ（ﾟдﾟlll）
+
 推荐时长：`1` 天
 
 #### 任务目标
@@ -188,6 +190,8 @@
 
 ### Node.JS
 
+> 正义的伙伴！
+
 推荐时长：`0.5` 天
 
 #### 任务目标
@@ -196,7 +200,7 @@
 2. 安装 Node 最新 **LTS** 版，并尝试阅读 Node 文档
 3. 在 `bingyan-summer-camp` 的 `js` 目录下下创建 `node` 文件夹，同时在 `node` 文件夹下建立 `task1` 文件夹
 4. 在 `task1` 文件夹里使用 npm 命令，初始化 `package.json` 并安装 `colors` 包
-5. 新建 index.js 文件，使用 node.js 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
+5. 新建 `index.js` 文件，使用 node.js 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
 
 #### 任务奖励
 
@@ -225,7 +229,53 @@
 
 ## ③层：框架之争
 
+#### React
 
+> 优雅的函数式编程
+
+推荐时长：`2` 天
+
+#### 任务目标
+
+1. 阅读文档并掌握 React
+2. 在 `bingyan-summer-camp` 创建 `react-todo-mvc` 文件夹
+3. 使用 [新手的姿势](https://reactjs.org/docs/getting-started.html#try-react) 下的`Online Playgrounds` 的方法构建应用（推荐使用下载文件到本地再编码）
+
+**注：只有当你掌握 node 之后才使用 `create-react-app`**
+
+#### 任务奖励
+
+1. 经验值 `20 Exp`
+
+#### 参考资料
+
+[官方文档](https://reactjs.org/)
+
+[TODOMVC](http://todomvc.com/examples/vanilla-es6/)
+
+#### Vue
+
+> 轻量的第三方库
+
+推荐时长：`2` 天
+
+#### 任务目标
+
+1. 阅读文档并掌握 vue
+2. 在 `bingyan-summer-camp` 创建 `vue-todo-mvc` 文件夹
+3. 使用 [新手的姿势](https://vuejs.org/v2/guide/) 构建应用
+
+**注：只有当你掌握 node 之后才使用 `vue-cli`**
+
+#### 任务奖励
+
+1. 经验值 `20 Exp`
+
+#### 参考资料
+
+[官方文档](https://vuejs.org/)
+
+[TODOMVC](http://todomvc.com/examples/vanilla-es6/)
 
 ### BOSS 挑战
 
@@ -233,7 +283,17 @@
 
 ## ④层：后端之旅
 
+#### 任务目标
 
+1. 使用 Node.JS 下的 express 或 koa 完成
+
+#### 任务奖励
+
+
+
+#### 参考资料
+
+[程序组夏令营仓库](https://github.com/tofar/bingyan-summer-camp2018)
 
 ### BOSS 挑战
 
@@ -241,7 +301,7 @@
 
 ## ⑤层：剑之试炼
 
-
+空
 
 ### BOSS 挑战
 
