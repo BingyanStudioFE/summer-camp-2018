@@ -104,7 +104,7 @@
 1. 创建并拥有一个 github 账号
 2. 了解并掌握 git 基本操作
 3. 新建一个 `bingyan-summer-camp` 空仓库
-4. 添加 `README.md` 文件并写入 `Hello bingyan!` （大标题）
+4. 添加 `hello.md` 文件并写入 `Hello bingyan!` （大标题）
 
 **注：这步涉及到后面内容的代码控制，请一定完成好哦！以下所有涉及此仓库的代码记得当日 push**
 
@@ -167,6 +167,7 @@
    - 常见的宿主环境及其全局对象
    - JS 原型链机制
    - JS 异步特性
+   - ES 6 相关内容
 
 2. 同时产生学习笔记写入 `bingyan-summer-camp` 的 `js` 文件夹下的 `note.md` 中
 
@@ -183,7 +184,7 @@
 
 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
-扎实基础推荐书目：
+（长期）扎实基础推荐书目：
 
 - JavaScript 高级程序设计
 - [YDKJS](https://github.com/getify/You-Dont-Know-JS)
@@ -237,9 +238,10 @@
 
 #### 任务目标
 
-1. 阅读文档并掌握 React
+1. 阅读完文档并掌握 React
 2. 在 `bingyan-summer-camp` 创建 `react-todo-mvc` 文件夹
-3. 使用 [新手的姿势](https://reactjs.org/docs/getting-started.html#try-react) 下的`Online Playgrounds` 的方法构建应用（推荐使用下载文件到本地再编码）
+3. 产生相应的学习笔记 `note.md`
+4. 使用 [新手的姿势](https://reactjs.org/docs/getting-started.html#try-react) 下的 `Online Playgrounds` 的方法构建应用（推荐使用下载文件到本地再编码）
 
 **注：只有当你掌握 node 之后才使用 `create-react-app`**
 
@@ -261,9 +263,10 @@
 
 #### 任务目标
 
-1. 阅读文档并掌握 vue
+1. 阅读完文档并掌握 vue
 2. 在 `bingyan-summer-camp` 创建 `vue-todo-mvc` 文件夹
-3. 使用 [新手的姿势](https://vuejs.org/v2/guide/) 构建应用
+3. 产生相应的学习笔记 `note.md`
+4. 使用 [新手的姿势](https://vuejs.org/v2/guide/) 构建应用
 
 **注：只有当你掌握 node 之后才使用 `vue-cli`**
 
@@ -289,7 +292,7 @@
 
 #### 任务奖励
 
-
+1. 经验值 `50 Exp`
 
 #### 参考资料
 
@@ -312,4 +315,16 @@
 > 这里是无限遐想的世界
 
 到这里你已经掌握了解决基本问题的技能，接下来的战斗需要更多的是你自己不断的努力来面对这场无尽的战争！
+
+但是，正如前面说到的，你首先得成为一名工程师，所以接下来建议是 **进一步补充基础**
+
+1. **计算机网络**
+2. **数据结构和算法**
+3. **操作系统**
+
+附录：[程序组仓库](https://github.com/tofar/bingyan-summer-camp2018)
+
+
+
+
 
