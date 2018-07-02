@@ -230,7 +230,7 @@
 
 ## ③层：框架之争
 
-#### React
+### React
 
 > 优雅的函数式编程
 
@@ -258,7 +258,7 @@
 
 [TODOMVC](http://todomvc.com/examples/vanilla-es6/)
 
-#### Vue
+### Vue
 
 > 轻量的第三方库
 
