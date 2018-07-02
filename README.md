@@ -242,6 +242,9 @@
 2. 在 `bingyan-summer-camp` 创建 `react-todo-mvc` 文件夹
 3. 产生相应的学习笔记 `note.md`
 4. 使用 [新手的姿势](https://reactjs.org/docs/getting-started.html#try-react) 下的 `Online Playgrounds` 的方法构建应用（推荐使用下载文件到本地再编码）
+5. 纯 `react` 实现完成后可尝试第三方库扩展应用
+   - react-router
+   - redux
 
 **注：只有当你掌握 node 之后才使用 `create-react-app`**
 
@@ -267,6 +270,9 @@
 2. 在 `bingyan-summer-camp` 创建 `vue-todo-mvc` 文件夹
 3. 产生相应的学习笔记 `note.md`
 4. 使用 [新手的姿势](https://vuejs.org/v2/guide/) 构建应用
+5. 纯 `vue` 实现完成后可尝试第三方库扩展应用
+   - vue-router
+   - vuex
 
 **注：只有当你掌握 node 之后才使用 `vue-cli`**
 
