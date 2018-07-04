@@ -14,6 +14,7 @@
     - Notes（空）
     - Project（空）
     - Tasks（空）
+    - Process.md
   - Li（李英豪）
   - Wu（吴静然）
   - README.md
@@ -471,18 +472,13 @@
 |               Editor               |    0.2     |
 |             HTML & CSS             |     1      |
 |             JavaScript             |     1      |
-|              Node.Js               |    0.5     |
-|          Task1 - Node.Js           |  0.5 - 1   |
-|     Task2 - Parts of products      |     3      |
+|           Task2 -Node.Js           |    0.5     |
+|          Task2 - Node.Js           |  0.5 - 1   |
+|     Task3 - Parts of products      |     3      |
 |            React / Vue             |     2      |
-| Task2Plus - Do it with a framework |     3      |
+| Task3Plus - Do it with a framework |     3      |
 |              后端进阶              |    2.5     |
 |            服务器/部署             |  0.5 - 1   |
 |              Project               |     7      |
-|                                    |            |
-|                                    |            |
-|                                    |            |
-|                                    |            |
-|                                    |            |
 
 
