@@ -458,9 +458,11 @@
 2. **数据结构和算法**
 3. **操作系统**
 
-附录：[程序组仓库](https://github.com/tofar/bingyan-summer-camp2018)
+附录：
 
+[程序组仓库](https://github.com/tofar/bingyan-summer-camp2018)
 
+[移动组仓库](https://github.com/Liujiaohan/bingyan-summer-camp2018)
 
 
 
