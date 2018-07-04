@@ -14,7 +14,7 @@
     - Notes（空）
     - Project（空）
     - Tasks（空）
-    - Process.md
+    - Process.md（进度表）
   - Li（李英豪）
   - Wu（吴静然）
   - README.md
