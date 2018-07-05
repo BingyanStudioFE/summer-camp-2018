@@ -55,7 +55,6 @@
 | 刘静蕾 | 唐友枫 |
 | 何剑冲 |  陶威  |
 | 吴静然 | 唐友枫 |
-| 刘静蕾 | 唐友枫 |
 
 接下来让我们开始紧张刺激的冰岩 `5` 层关卡挑战吧 ~~ Link Start ！！
 
@@ -90,6 +89,8 @@
 
 **注：这步涉及到后面内容的代码控制，请一定完成好哦！以下所有涉及此仓库的代码记得当日 push**
 
+关键词：git、github
+
 #### 任务奖励
 
 1. 经验值 `10 Exp`
@@ -109,6 +110,8 @@
 
 1. 阅读并了解 markdown 语法规范
 2. 熟练使用基本的 markdown 操作
+
+关键词：markdown、typora、简书、插件
 
 #### 任务奖励
 
@@ -133,6 +136,8 @@
 2. 能够正常访问 Google、Facebook、Twitter、某hub（不要想歪！）等国外网站
 3. （选做）成功申请并使用上 gmail
 4. 修改默认搜索引擎为 google
+
+关键词：Google、Shadowsocks、Virtual Private Network
 
 #### 任务奖励
 
@@ -163,6 +168,8 @@
    - 王の宝具：Vim | Emacs
 2. 了解并安装适当的插件
 
+关键词：coding
+
 #### 任务奖励
 
 1. 经验值 `5 Exp`
@@ -175,8 +182,6 @@
 [Atom](https://atom.io/)
 
 [WebStorm 学生授权](https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F)
-
-
 
 ### HTML 与 CSS
 
@@ -192,6 +197,8 @@
 4. **掌握理解 `flex` 布局**
 5. 动手实践，写小demo存在 `你的文件夹/Tasks/HTML&CSS`中
 6. 产生相应的笔记写入`你的文件夹/Notes/HTML&CSS.md` 中
+
+关键词：W3C、HTML5、CSS3
 
 #### 任务位置
 
@@ -229,11 +236,13 @@
    - 常见的宿主环境及其全局对象
    - JS 原型链机制
    - JS 异步特性
-   - ES 6 相关内容
+   - ES6 相关内容
 
 2. 同时产生学习笔记写入 `你的文件夹/Notes/JavaScript.md` 中
 
 3. 测试demo写入`你的文件夹/Tasks/js`
+
+关键词：动态语言、Asynchronus、DOM、ES6
 
 #### 任务位置
 
@@ -258,6 +267,7 @@
 
 - JavaScript 高级程序设计
 - [YDKJS](https://github.com/getify/You-Dont-Know-JS)
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
 
 ### Node.JS
 
@@ -315,7 +325,7 @@
 
 #### 任务目标
 
-对产品组任务的idea进行分解，分解成多个功能/页面，使用原生js + node 完成某些功能点或某些页面
+对产品组任务的idea进行分解，分解成多个功能/页面，使用原生 js + node 完成某些功能点或某些页面
 
 #### 任务位置
 
@@ -340,6 +350,9 @@
 5. 纯 `react` 实现完成后可尝试第三方库扩展应用
    - react-router
    - redux
+   - ....
+
+关键词：Data Driven、Single Page Application(SPA)
 
 **注：只有当你掌握 node 之后才使用 `create-react-app`**
 
@@ -368,6 +381,9 @@
 5. 纯 `vue` 实现完成后可尝试第三方库扩展应用
    - vue-router
    - vuex
+   - ....
+
+关键词：Data Driven、Single Page Application(SPA)
 
 **注：只有当你掌握 node 之后才使用 `vue-cli`**
 
@@ -395,7 +411,7 @@
 
 ## ④层：后端之旅 
 
-> 了解后端
+> 不了解后端的前端工程师不是个好的前端工程师
 
 推荐时长：`2.5`天
 
@@ -405,6 +421,8 @@
 2. 使用nodejs能与数据库连接/交互（推荐使用MongoDB）
 3. 使用数据库，更新迭代已完成的命令行成员管理系统
 4. 为管理系统搭建简单界面（要求：界面美观，尽量适配）
+
+关键词：服务器编程、非关系型数据库、关系型数据库
 
 #### 任务位置
 
@@ -460,16 +478,15 @@
 
 1. **W3C 标准规范**
 2. **ECMAScript 标准规范**
-3. **深入研究框架底层**
-4. **深入研究 JavaScript 底层相关知识**
+3. **前端工程化**
+4. **深入研究框架底层**
+5. **深入研究 JavaScript 底层相关知识**
 
 附录：
 
 [程序组仓库](https://github.com/tofar/bingyan-summer-camp2018)
 
 [移动组仓库](https://github.com/Liujiaohan/bingyan-summer-camp2018)
-
-
 
 ### 时间规划表
 
