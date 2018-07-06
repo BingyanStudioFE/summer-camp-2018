@@ -4,6 +4,7 @@
 1. 学通Vue React Loopback框架
 2. 学通Express 了解其他后端框架
 3. 系统学习CSS3
+4. 巩固js基础
 
 ## 实践项目
 1. 完成夏令营要求的项目
