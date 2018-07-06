@@ -269,7 +269,7 @@
 - [YDKJS](https://github.com/getify/You-Dont-Know-JS)
 - [Eloquent JavaScript](http://eloquentjavascript.net/)
 
-### Node.JS
+### Node.js
 
 > 正义的伙伴！
 
@@ -282,7 +282,7 @@
 3. 笔记记入`你的文件夹/Notes/Node.md`
 4. 在 `你的文件夹/Tasks/node` 目录下下创建`task1`文件夹
 5. 在 `task1` 文件夹里使用 npm 命令，初始化 `package.json` 并安装 `colors` 包
-6. 新建 `index.js` 文件，使用 node.js 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
+6. 新建 `index.js` 文件，使用 nodejs 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
 
 #### 任务位置
 
@@ -297,11 +297,11 @@
 
 #### 参考资料
 
-[Node.JS 是干嘛的](https://www.zhihu.com/question/33578075)
+[Node.js是干嘛的](https://www.zhihu.com/question/33578075)
 
-[Node.JS](https://nodejs.org/)
+[Node.js](https://nodejs.org/)
 
-[简易 Node.JS 教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000)
+[简易 Node.js 教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000)
 
 [聊聊 Node.js 的历史](http://gitbook.cn/books/58e796fd09012f0a48761eae/index.html)
 
@@ -311,7 +311,7 @@
 
 推荐时长：`0.5 - 1`天
 
-使用nodeJs 构建命令行（问答形式）成员管理系统（静态Json数据类型，具体需求待定）
+使用 nodejs 构建命令行（问答形式）成员管理系统（静态Json数据类型，具体需求待定）
 
 #### 任务位置
 
@@ -417,8 +417,8 @@
 
 #### 任务目标
 
-1. 使用 Node.JS 下的 express 或 koa 完成
-2. 使用nodejs能与数据库连接/交互（推荐使用MongoDB）
+1. 使用 nodejs 下的 express 或 koa 完成
+2. 使用 nodejs 能与数据库连接/交互（推荐使用MongoDB）
 3. 使用数据库，更新迭代已完成的命令行成员管理系统
 4. 为管理系统搭建简单界面（要求：界面美观，尽量适配）
 
@@ -494,12 +494,12 @@
 | :--------------------------------: | :--------: |
 |             git/github             |    0.5     |
 |              Markdown              |    0.5     |
-|                翻墙                |    0.8     |
+|             Cross GFW              |    0.8     |
 |               Editor               |    0.2     |
 |             HTML & CSS             |     1      |
 |             JavaScript             |     1      |
-|           Task2 -Node.Js           |    0.5     |
-|          Task2 - Node.Js           |  0.5 - 1   |
+|           Task2 -Node.js           |    0.5     |
+|          Task2 - Node.js           |  0.5 - 1   |
 |     Task3 - Parts of products      |     3      |
 |            React / Vue             |     2      |
 | Task3Plus - Do it with a framework |     3      |
