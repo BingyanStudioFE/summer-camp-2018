@@ -297,7 +297,7 @@
 
 #### 参考资料
 
-[Node.js是干嘛的](https://www.zhihu.com/question/33578075)
+[Node.js 是干嘛的](https://www.zhihu.com/question/33578075)
 
 [Node.js](https://nodejs.org/)
 
