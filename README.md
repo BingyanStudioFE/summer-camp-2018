@@ -80,14 +80,16 @@
 
 1. 创建并拥有一个 github 账号
 2. 了解并掌握 git 基本操作
-3. Fork 并 Clone Summer-Camp-2018夏令营仓库
-4. 在`你的文件夹/Tasks` 添加 `hello.md` 文件并写入 `Hello bingyan!` （大标题）
+3. Fork 并 Clone summer-camp-2018夏令营仓库
+4. 在`你的文件夹/Tasks` 添加 `hello.md` 文件并写入 `Hello bingyan!` （1级标题）
 
 #### 任务位置
 
 `你的文件夹/Tasks`
 
 **注：这步涉及到后面内容的代码控制，请一定完成好哦！以下所有涉及此仓库的代码记得当日 push**
+
+关键词：git、github
 
 #### 任务奖励
 
@@ -109,6 +111,8 @@
 1. 阅读并了解 markdown 语法规范
 2. 熟练使用基本的 markdown 操作
 
+关键词：markdown、typora、简书、插件
+
 #### 任务奖励
 
 1. 经验值 `10 Exp`
@@ -123,6 +127,7 @@
 ### 正确获取知识的姿势
 
 > 你看百度的工程师都用在用 google，所以要什么百度自行车！
+
 推荐时长：`0.8` 天
 
 #### 任务目标
@@ -131,6 +136,8 @@
 2. 能够正常访问 Google、Facebook、Twitter、某hub（不要想歪！）等国外网站
 3. （选做）成功申请并使用上 gmail
 4. 修改默认搜索引擎为 google
+
+关键词：Google、Shadowsocks、Virtual Private Network
 
 #### 任务奖励
 
@@ -161,6 +168,8 @@
    - 王の宝具：Vim | Emacs
 2. 了解并安装适当的插件
 
+关键词：coding
+
 #### 任务奖励
 
 1. 经验值 `5 Exp`
@@ -173,8 +182,6 @@
 [Atom](https://atom.io/)
 
 [WebStorm 学生授权](https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F)
-
-
 
 ### HTML 与 CSS
 
@@ -190,6 +197,8 @@
 4. **掌握理解 `flex` 布局**
 5. 动手实践，写小demo存在 `你的文件夹/Tasks/HTML&CSS`中
 6. 产生相应的笔记写入`你的文件夹/Notes/HTML&CSS.md` 中
+
+关键词：W3C、HTML5、CSS3
 
 #### 任务位置
 
@@ -209,10 +218,6 @@
 
 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web)
 
-#### BOSS 挑战
-
-空
-
 ## ①层：JavaScript 的天下
 
 ### JavaScript 基础
@@ -231,11 +236,13 @@
    - 常见的宿主环境及其全局对象
    - JS 原型链机制
    - JS 异步特性
-   - ES 6 相关内容
+   - ES6 相关内容
 
 2. 同时产生学习笔记写入 `你的文件夹/Notes/JavaScript.md` 中
 
 3. 测试demo写入`你的文件夹/Tasks/js`
+
+关键词：Ajax、Asynchronus、DOM、ES6
 
 #### 任务位置
 
@@ -260,8 +267,9 @@
 
 - JavaScript 高级程序设计
 - [YDKJS](https://github.com/getify/You-Dont-Know-JS)
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
 
-### Node.JS
+### Node.js
 
 > 正义的伙伴！
 
@@ -274,7 +282,7 @@
 3. 笔记记入`你的文件夹/Notes/Node.md`
 4. 在 `你的文件夹/Tasks/node` 目录下下创建`task1`文件夹
 5. 在 `task1` 文件夹里使用 npm 命令，初始化 `package.json` 并安装 `colors` 包
-6. 新建 `index.js` 文件，使用 node.js 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
+6. 新建 `index.js` 文件，使用 nodejs 运行，并尝试用代码在其中输出彩虹色的 `Geek is the new sexy!`
 
 #### 任务位置
 
@@ -289,11 +297,11 @@
 
 #### 参考资料
 
-[Node.JS 是干嘛的](https://www.zhihu.com/question/33578075)
+[Node.js 是干嘛的](https://www.zhihu.com/question/33578075)
 
-[Node.JS](https://nodejs.org/)
+[Node.js](https://nodejs.org/)
 
-[简易 Node.JS 教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000)
+[简易 Node.js 教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501245426ad4b91f2b880464ba876a8e3043fc8ef000)
 
 [聊聊 Node.js 的历史](http://gitbook.cn/books/58e796fd09012f0a48761eae/index.html)
 
@@ -303,7 +311,7 @@
 
 推荐时长：`0.5 - 1`天
 
-使用nodeJs 构建命令行（问答形式）成员管理系统（静态Json数据类型，具体需求待定）
+使用 nodejs 构建命令行（问答形式）成员管理系统（静态Json数据类型，具体需求待定）
 
 #### 任务位置
 
@@ -317,7 +325,7 @@
 
 #### 任务目标
 
-对产品组任务的idea进行分解，分解成多个功能/页面，使用原生js + node 完成某些功能点或某些页面
+对产品组任务的idea进行分解，分解成多个功能/页面，使用原生 js + node 完成某些功能点或某些页面
 
 #### 任务位置
 
@@ -342,6 +350,9 @@
 5. 纯 `react` 实现完成后可尝试第三方库扩展应用
    - react-router
    - redux
+   - ....
+
+关键词：Data Driven、Single Page Application(SPA)
 
 **注：只有当你掌握 node 之后才使用 `create-react-app`**
 
@@ -370,6 +381,9 @@
 5. 纯 `vue` 实现完成后可尝试第三方库扩展应用
    - vue-router
    - vuex
+   - ....
+
+关键词：Data Driven、Single Page Application(SPA)
 
 **注：只有当你掌握 node 之后才使用 `vue-cli`**
 
@@ -397,16 +411,18 @@
 
 ## ④层：后端之旅 
 
-> 了解后端
+> 不想写后端的工程师不是一个好的前端工程师 (～o￣3￣)～
 
 推荐时长：`2.5`天
 
 #### 任务目标
 
-1. 使用 Node.JS 下的 express 或 koa 完成
-2. 使用nodejs能与数据库连接/交互（推荐使用MongoDB）
+1. 使用 nodejs 下的 express 或 koa 完成
+2. 使用 nodejs 能与数据库连接/交互（推荐使用MongoDB）
 3. 使用数据库，更新迭代已完成的命令行成员管理系统
 4. 为管理系统搭建简单界面（要求：界面美观，尽量适配）
+
+关键词：服务器编程、非关系型数据库、关系型数据库
 
 #### 任务位置
 
@@ -424,7 +440,7 @@
 
 推荐时长：`0.5 - 1`天
 
-1. 购买阿里云学生优惠服务器
+1. *本地部署或购买阿里云学生优惠服务器（不强制要求购买服务器）
 2. 部署改完成项目至服务器（推荐使用nginx）
 3. 发出服务器地址给导师
 4. 笔记记入`Server.md`
@@ -452,11 +468,19 @@
 
 到这里你已经掌握了解决基本问题的技能，接下来的战斗需要更多的是你自己不断的努力来面对这场无尽的战争！
 
-但是，正如前面说到的，你首先得成为一名工程师，所以接下来建议是 **进一步补充基础**
+但是，正如前面说到的，你首先得成为一名工程师，所以接下来建议是 **进一步补充巩固工程师的基本素养**
 
 1. **计算机网络**
 2. **数据结构和算法**
 3. **操作系统**
+
+或者 **继续补充前端的相关知识**
+
+1. **W3C 标准规范**
+2. **ECMAScript 标准规范**
+3. **前端工程化**
+4. **深入研究框架底层**
+5. **深入研究 JavaScript 底层相关知识**
 
 附录：
 
@@ -464,20 +488,18 @@
 
 [移动组仓库](https://github.com/Liujiaohan/bingyan-summer-camp2018)
 
-
-
 ### 时间规划表
 
 |               任务名               | 时长（天） |
 | :--------------------------------: | :--------: |
 |             git/github             |    0.5     |
 |              Markdown              |    0.5     |
-|                翻墙                |    0.8     |
+|             Cross GFW              |    0.8     |
 |               Editor               |    0.2     |
 |             HTML & CSS             |     1      |
 |             JavaScript             |     1      |
-|           Task2 -Node.Js           |    0.5     |
-|          Task2 - Node.Js           |  0.5 - 1   |
+|           Task2 -Node.js           |    0.5     |
+|          Task2 - Node.js           |  0.5 - 1   |
 |     Task3 - Parts of products      |     3      |
 |            React / Vue             |     2      |
 | Task3Plus - Do it with a framework |     3      |
