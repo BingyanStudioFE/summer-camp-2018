@@ -45,13 +45,12 @@
      <a href="?art&amp;copy">Art and Copy</a> <!-- the & has to be escaped, since &copy is a named character reference -->
      ```
 
-     ​
 
    - 内容模型和属性值的限制：
 
 4. Document metadata
 
-   - what`s in the head?
+   - what's in the head?
 
      - title 页标签名 document.title
 
