@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>practice</title>
+    <style type="text/css">
+      body {
+        display: flex;
+        background-color: black;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .item {
+        display: block;
+      }
+      .box1 {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .box2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .box2 .item:nth-of-type(2) {      /*第二个选择器前需要加一个空格*/
+        align-self: flex-end;   
+      }
+      .box3 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .box3 .item:nth-of-type(2) {
+        align-self: center;
+      }
+      .box3 .item:nth-of-type(3) {
+        align-self: flex-end;
+      }
+      .box4 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .box4 .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .box5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .box5 .row {
+        display: flex;
+        justify-content: space-between;
+      }
+      .box5 .row:nth-of-type(2) {
+        justify-content: center;
+      }
+      .box6 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .box6 .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      html,body {
+        height: 100%;
+      }
+      .box1,.box2,.box3,.box4,.box5,.box6 { 
+        height: 100px;
+        width: 100px;
+        background-color: #d7d7d7;
+        border-radius:10%;
+      }
+      .item {
+        background-color: black;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+      }
+
+   
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <span class="item"></span>
+    </div>
+    <div class="box2">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="box3">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="box4">
+      <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+    </div>
+    <div class="box5">
+      <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div class="row">
+        <span class="item"></span>
+      </div>
+      <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+    </div>
+    <div class="box6">
+      <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+    </div>
+  </body>
+</html>
