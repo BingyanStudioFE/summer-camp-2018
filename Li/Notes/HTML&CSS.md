@@ -9,11 +9,11 @@
 # FLEX
 ## 内含元素属性
     .flex-box{
-        order: <integer>;
-         flex-grow: <number>; /* default 0 */
-         flex-shrink: <number>; /* default 1 */
-         flex-basis: <length> | auto; /* default auto */
-         align-self: auto | flex-start | flex-end | center | baseline | stretch;
+      order: <integer>;
+      flex-grow: <number>; /* default 0 */
+      flex-shrink: <number>; /* default 1 */
+      flex-basis: <length> | auto; /* default auto */
+      align-self: auto | flex-start | flex-end | center | baseline | stretch;
     }
 ## 含义
 * flex-direction：属性决定主轴的方向（即项目的排列的方向）。
@@ -29,12 +29,12 @@
 * align-content：属性定义了多根轴线的对齐方式。如果项目只有一根轴线（容器元素不换行），该属性不起作用
 ## 容器属性
     .box{
-    display: flex;
-    flex-direction: row | row-reverse | column | column-reverse;
-    flex-wrap: nowrap | wrap | wrap-reverse;
-    flex-flow: <flex-direction> || <flex-wrap>;
-    justify-content: flex-start | flex-end | center | space-between | space-around;
-    align-items: flex-start | flex-end | center | baseline | stretch;
+      display: flex;
+      flex-direction: row | row-reverse | column | column-reverse;
+      flex-wrap: nowrap | wrap | wrap-reverse;
+      flex-flow: <flex-direction> || <flex-wrap>;
+      justify-content: flex-start | flex-end | center | space-between | space-around;
+      align-items: flex-start | flex-end | center | baseline | stretch;
     }
 ## 含义
 * order：属性定义项目的排列顺序。数值越小，排列越靠
