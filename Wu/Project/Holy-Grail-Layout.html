@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HolyGrailLayout</title>
+    <style type=text/css>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      footer {
+        background: rgba(5, 3, 0, 0.1)
+      }
+      .HGbody {
+        display: flex;
+      }
+      .HGbody {
+        flex: 1;
+      }
+      main {
+        flex: 1;
+        background: rgba(218, 88, 41, 0.555)
+      }
+      nav {
+        order: -1;
+        flex: 0 0 12em;
+        background: rgba(147, 127, 108, 0.61)
+      }
+      aside {
+        flex: 0 0 12em;
+        background: rgba(147, 127, 108, 0.863)
+      }
+      /*响应式设计*/
+      .HGbody {
+        flex-direction: column;
+      }
+      @media (min-width: 768px) {
+        .HGbody{
+            flex-direction: row;
+            flex: 1;
+        }
+        main {
+            flex: 1;
+        }
+        nav,
+        aside {
+            flex: 0 0 12em;
+        }
+      }
+
+      /*other code*/
+      header {
+        background: rgba(147, 108, 121, 0.938)
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <div class="HGbody">
+      <main>MAIN</main>
+      <nav>NAV</nav>
+      <aside>aside</aside>
+    </div>
+    <footer>FOOTER</footer>
+  </body>
+</html>
