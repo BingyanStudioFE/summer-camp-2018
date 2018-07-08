@@ -9,13 +9,15 @@
 <body>
     <h1>目标:用flex写一个诡异抖动</h1>
     <div class="wrapper">
-    	<div class="content">1</div>
-        <div class="content">2</div>
-        <div class="content">3</div>
-        <div class="content">4</div>
-        <div class="content">5</div>
+    	<div class="content" title="this is title" text="this is text"></div>
     </div>
     <style>
+        *::after,
+        *::before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
         .wrapper {
           position: fixed;
           width: 100%;
@@ -28,17 +30,42 @@
           align-items: center;
         }
         .content {
-            display: block;
-            width: 15%;
-            height: 15%;
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            width: 50%;
+            height: 50%;
             background: #ccc;
-            transition: 3s;
         }
-        .content:hover {
-          align-self: flex-start;
-          transition: 3s;
+        
+        .content::before,
+        .content::after {
+            padding: 30px;
+            position: absolute;
+            width: 100%;
+            z-index:1;
+            opacity: 0;
+            transition: .3s ease-in-out;
         }
-
+        .content::before {
+            text-align: center;
+            height: 30%;
+            background: green;
+            font-size: 40px;
+            content: attr(title);
+        }
+        .content::after {
+            text-indent: 2rem;
+            bottom: 0;
+            height: 70%;
+            background: yellow;
+            font-size: 20px;
+            content: attr(text);
+        }
+        .content:hover::before,
+        .content:hover::after {
+            opacity: 1;
+        }
     </style> 
 </body>
 </html>

@@ -99,6 +99,52 @@
 |::first-letter|文本第一个字母|使用::before生成的文本也可以被指定首字母|
 |::first-line|元素的第一行|只在块级元素之中起作用|
 |::placeholder|字面含义|非标准|
+# CSS3其他属性补充 
+
+## 动画  
+
+### 过渡动画  
+
+> 由一个状态过渡到另一个状态自动生成的动画效果,可以过渡的属性包括尺寸·透明度·颜色等    
+> 
+
+```css
+.element {
+   transition:<single-transitin>[,<single-transition>]*
+  <single-transition>=[none | <single-transition-property>] || <time> || <single-transition-timing-function> || <time>
+  <transition-property>:参与过渡的属性
+  <transition-duration>:过渡的持续时间
+  <transition-timing-function>:动画类型
+  <transition-delay>:延迟过渡的时间
+}  
+```
+
+### 帧动画  
+> 也叫补间动画，用来控制中间过程
+> 使用@keyframes定义，animation调用
+
+```css
+@keyframes <identifier> {
+  <keyframes-blocks>
+}
+<keyframes-blocks>:[[from | to | <percentage>]{sRules}][[,from | to | <percentage>]{sRules}]}*
+<identifier>:动画名称
+<keyframes-blocks>:每个阶段的样式
+```
+***
+```css
+animation:<single-animation>[,<single-animation>]*
+<single-animation> = <single-animation-name> || <time> || <single-animation-timing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state>
+animation-name ： 检索或设置对象所应用的动画名称 
+animation-duration： 检索或设置对象动画的持续时间 
+animation-timing-function： 检索或设置对象动画的过渡类型 
+animation-delay： 检索或设置对象动画延迟的时间 
+animation-iteration-count： 检索或设置对象动画的循环次数 
+animation-direction： 检索或设置对象动画在循环中是否反向运动 
+animation-fill-mode： 检索或设置对象动画时间之外的状态 
+animation-play-state： 检索或设置对象动画的状态。w3c正考虑是否将该属性移除，因为动画的状	
+态可以通过其它的方式实现，比如重设样式
+```
 
 
 
