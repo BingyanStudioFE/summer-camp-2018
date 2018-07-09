@@ -166,6 +166,7 @@
    - 高冷级宝具：Atom
    - IDE 级宝具：WebStorm
    - 王の宝具：Vim | Emacs
+   - Adobe 宝具: Brackets
 2. 了解并安装适当的插件
 
 关键词：coding
