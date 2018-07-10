@@ -17,6 +17,9 @@ module.exports = {
         path.resolve(__dirname, 'bower_components')
       ],
       loader: 'babel-loader',
+      query: {
+        presets: ['es2015']
+      }
     }]
   },
   resolve: {
@@ -24,6 +27,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    publicPath: path.join('/dist/')
+    // publicPath: path.join('/dist/'),
+    contentBase: path.join(__dirname, "dist")
   }
 };
