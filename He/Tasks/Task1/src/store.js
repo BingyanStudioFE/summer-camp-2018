@@ -102,7 +102,6 @@ export default class Store {
 		const todos = this.getLocalStorage();
 		todos.push(item);
 		this.setLocalStorage(todos);
-		console.log(1)
 		if (callback) {
 			callback();
 		}

@@ -27,7 +27,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    // publicPath: path.join('/dist/'),
-    contentBase: path.join(__dirname, "dist")
+    publicPath: '/dist/',
+    contentBase: __dirname
   }
 };
