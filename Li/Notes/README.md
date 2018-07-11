@@ -1,14 +1,10 @@
-# 夏令营学习目标
+# 我的NOTES文件夹结构
 
-## 理论知识
-1. 巩固js基础
-2. 学通ES6规范
-3. 系统学习CSS3
-4. 学通Express框架
-5. 学通Vue框架
-
-## 实践项目
-1. 完成夏令营要求的项目
-2. 通过问学长和踩坑了解云服务器的使用
-3. 了解项目上线的流程和操作方法，注意事项
-4. 用Vue+Loopback框架开发类似Upick的app （详细需求见后续说明）
+* HTML&CSS
+  * HTML&CSS.md	            保存我见到的以往不熟悉的属性以便日常查翻
+  * others.md               学习笔记，在Tasks的NoteTasks中有对应demo                
+* js
+  * js.md 			
+  * others.md
+* others
+  * others.md

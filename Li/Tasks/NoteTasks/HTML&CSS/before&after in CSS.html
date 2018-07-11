@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex布局实验</title>
+</head>
+<body>
+    <h1>after&&before</h1>
+    <div class="wrapper">
+        <div class="content1" title="this is title" text="this is text"></div>
+        <div class="content2" title="this is title" text="this is text"></div>
+    </div>
+    <div class="test">
+        <div class="underline">underline</div>
+    </div>
+    <style>
+        *::after,
+        *::before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .wrapper {
+          width: 100%;
+          height: 600px;
+          background: #fff;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .content1,.content2 {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            width: 50%;
+            height: 50%;
+            background: #ccc;
+        }
+        .content2 {
+            overflow: hidden;
+        }
+        .content1::before,
+        .content1::after {
+            padding: 30px;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+        .content2::before,
+        .content2::after {
+            padding: 30px;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+        .content1::before {
+            text-align: center;
+            height: 30%;
+            background: green;
+            font-size: 40px;
+            content: attr(title);
+        }
+        .content1::after {
+            text-indent: 2rem;
+            bottom: 0;
+            height: 70%;
+            background: yellow;
+            font-size: 20px;
+            content: attr(text);
+        }
+        .content2::before {
+            text-align: center;
+            height: 30%;
+            background: green;
+            font-size: 40px;
+            content: attr(title);
+            -webkit-transform: translateY(-100%); 
+            -moz-transform: translateY(-100%); 
+            transform: translateY(-100%);
+        }
+        .content2::after {
+            text-indent: 2rem;
+            bottom: 0;
+            height: 70%;
+            background: yellow;
+            font-size: 20px;
+            content: attr(text);
+            -webkit-transform: translateY(100%); 
+            -moz-transform: translateY(100%); 
+            transform: translateY(100%);
+        }
+        .content1:hover::before,
+        .content1:hover::after {
+            opacity: 1;
+        }
+        .content2:hover::before,
+        .content2:hover::after {
+            opacity: 1;
+            -webkit-transform: translateY(0); 
+            -moz-transform: translateY(0); 
+            transform: translateY(0);
+        }
+
+        .test {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .underline::before {
+            position:absolute;
+            width: 100%;
+            bottom: 0;
+            height: 5px;
+            background: blue;
+            content: " ";
+            opacity: 0;
+        }
+        .underline:hover::before {
+            opacity: 1;
+        }
+    </style> 
+</body>
+</html>
