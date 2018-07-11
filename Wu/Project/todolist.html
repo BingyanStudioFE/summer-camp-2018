@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+  <head> 
+    <style type=text/css>
+      html,body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(231, 226, 226, 0.616);
+      }
+      #todoapp {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        margin: 0px;
+        color: rgba(206, 47, 47, 0.322);
+      }
+      #header {
+        display: flex;
+        flex: none;
+      }
+      #main {
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        background-color: rgba(175, 172, 172, 0.616);
+      }
+      #footer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: rgba(175, 172, 172, 0.616);
+      }
+      #filters {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        font-size: 10px;
+        list-style: none;
+      }
+      input {
+        display: block;/*属性应为blocks，否则表单无法竖直排列*/
+      }
+      input[type="text"] {
+        width: 400px;
+        height: 40px;
+        flex: none;
+      }
+      input[type="checkbox"] {
+        outline: none;
+        flex:1;
+      }
+      div {
+        display: flex;
+      }
+    </style>
+    <script type="text/javascript"> 
+      function changeEnterPress(e){
+        var e = e || window.event;
+        var a = document.getElementById('new-todo');
+        var b = document.activeElement;
+        var parent = b.parentElement;
+        if (e.keyCode == 13 && b.value !='') {
+          a.focus();
+        }else if (e.keyCode == 13 && b.value == '') {
+          parent.parentNode.removeChild(parent);
+          a.focus();
+        }else if (e.keyCode == 8 && b.value == ''){
+          parent.parentNode.removeChild(parent);
+          a.focus();
+        }
+        countItems();
+      }
+      function EnterPress(e){ //传入 event 
+        var e = e || window.event;
+        var nToDo = document.getElementById('new-todo'); 
+        if(e.keyCode == 13 && nToDo.value != ''){ 
+          var oToDo = document.createElement('input');
+          var check_oToDo = document.createElement('input');
+          var divWrap = document.createElement('div');
+
+          check_oToDo.type = "checkbox";
+          oToDo.type = "text";
+          
+          check_oToDo.name = "todo";
+          check_oToDo.setAttribute("onclick","countItems()");
+
+          oToDo.value = nToDo.value;
+          divWrap.setAttribute("onkeypress","changeEnterPress(event)");
+          divWrap.setAttribute("onkeydown","changeEnterPress()");
+          nToDo.value = '';
+          divWrap.appendChild(check_oToDo);
+          divWrap.appendChild(oToDo);
+          var Main = document.getElementById("f-main");
+          Main.appendChild(divWrap);
+        }
+        countItems();
+      } 
+      function deleteAll(){
+        var a = document.getElementsByName("todo");
+        var n = a.length;
+        for (let i = 0;i < n;i++) {
+          if(a[i].checked){
+            let a_parent = a[i].parentNode;
+            a_parent.parentNode.removeChild(a_parent);
+            n--;  //a的长度随着removeChild操作而逐渐减少，数组中各元素在数组中的位置也会随着变化。
+            i--;
+          }
+        }
+        countItems();
+      }
+      function selectAll(){
+        var a = document.getElementsByName("todo");
+        var n = a.length;
+        for(let i =0;i < n;i++) {
+          a[i].checked = true;
+        }
+      }
+      function countItems(){
+        var a = document.getElementsByName("todo");
+        var n = a.length;
+        var count = 0;
+        for (let i =0;i < n;i++) {
+          if(a[i].checked == false){
+            count++;
+          }
+        }
+        var p = document.getElementById('count')
+        if (count == 0){
+          p.innerHTML = '0 item left';
+        }else {
+          p.innerHTML = count + ' items left';
+        }
+      }
+    </script> 
+  </head> 
+
+  <body>
+    <section id="todoapp">
+      <header>
+        <h1>todos</h1>
+        <div id="header">
+          <input type="button" id="toggle-all" onclick="selectAll()" value="全选">
+          <input type="text" id="new-todo" onkeypress="EnterPress(event)" onkeydown="EnterPress()" />
+        </div>
+      </header> 
+
+      <section id="main"> 
+        <form id="f-main">
+
+        </form>  
+      </section>
+      <footer id="footer">
+        <ul id="filters">
+          <li>
+            <a id="count">0 item left</a>
+          </li>
+          <li>
+            <a href="#all">All</a>
+          </li>
+          <li>
+            <a href="#active">Active</a>
+          </li>
+          <li>
+            <a href="#completed">Completed</a>
+          </li>
+          <li>
+            <input type="button" name="delete" onclick="deleteAll()" value="Clear completed">
+          </li>
+        </ul>
+      </footer>  
+    </section> 
+  </body> 
+                
+
+</html>
