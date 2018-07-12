@@ -29,7 +29,7 @@ export var EmptyItemQuery;
  *
  * @type {EmptyItemQuery}
  */
-export const emptyItemQuery = Empty.Record;
+export const emptyItemQuery = {};
 
 /**
  * @typedef {!({id: number}|{completed: boolean}|EmptyItemQuery)}

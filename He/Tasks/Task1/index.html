@@ -1,38 +1,40 @@
-<!doctype html>
-<html lang="en" data-framework="es6">
-	<head>
-		<meta charset="utf-8">
-		<title>Vanilla ES6 • TodoMVC</title>
-	</head>
-	<body>
-		<section class="todoapp">
-			<header class="header">
-				<h1>todos</h1>
-				<input class="new-todo" placeholder="What needs to be done?" autofocus>
-			</header>
-			<section style="display:none" class="main">
-				<input id="toggle-all" class="toggle-all" type="checkbox">
-				<label for="toggle-all">Mark all as complete</label>
-				<ul class="todo-list"></ul>
-				<footer class="footer">
-					<span class="todo-count"></span>
-					<ul class="filters">
-						<li>
-							<a href="#/" class="selected">All</a>
-						</li>
-						<li>
-						<a href="#/active">Active</a>
-						</li>
-						<li>
-						<a href="#/completed">Completed</a>
-						</li>
-					</ul>
-					<button class="clear-completed">Clear completed</button>
-				</footer>
-			</section>
-		</section>
-		<script src="dist/bundle.js"></script>
-		<!-- <script src="node_modules/todomvc-common/base.js"></script>
-		<link rel="stylesheet" href="node_modules/todomvc-common/base.css"> -->
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task1 demo with es6</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="main-app">
+        <h1>my TODO List</h1>
+        <input type="text" class="app-main-input" placeholder="输入需要完成的事">
+        <div class="app-item-list" style="display: none">
+            <label for="toggle-all-items">标记事项是否完成</label>
+            <input type="checkbox" id="toggle-all-items">
+            <ul class="todo-list"></ul>
+            <div class="todo-list-footer">
+                <span id="items-left"></span>
+                <ul class="items-filters">
+                    <li>
+                        <a href="#/">所有</a>
+                    </li>
+                    <li>
+                        <a href="#/left">未完成</a>
+                    </li>
+                    <li>
+                        <a href="#/completed">完成了的</a>
+                    </li>
+                </ul>
+                <button class="clear-completed">清空完成事项</button>
+            </div>
+        </div>
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+
 </html>
