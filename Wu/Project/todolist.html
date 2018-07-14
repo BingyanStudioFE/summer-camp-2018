@@ -61,8 +61,22 @@
       div {
         display: flex;
       }
+      #completed,#active {
+        flex-direction: column;
+      }
     </style>
     <script type="text/javascript"> 
+      function Todo(value) {
+        this.value = value;
+        this.state = false;//默认未完成
+        
+        
+      }
+
+      var todos = [];
+
+      
+
       function changeEnterPress(e){
         var e = e || window.event;
         var a = document.getElementById('new-todo');
@@ -72,9 +86,25 @@
           a.focus();
         }else if (e.keyCode == 13 && b.value == '') {
           parent.parentNode.removeChild(parent);
+
+          for (let i = 0;i <todos.length;i++) {
+            if(todos[i].value == b.value){
+              todos.splice(i,1);
+              break;
+            }
+          }
+
           a.focus();
         }else if (e.keyCode == 8 && b.value == ''){
           parent.parentNode.removeChild(parent);
+
+          for (let i = 0;i <todos.length;i++) {
+            if(todos[i].value == b.value){
+              todos.splice(i,1);
+              break;
+            }
+          }
+
           a.focus();
         }
         countItems();
@@ -82,7 +112,7 @@
       function EnterPress(e){ //传入 event 
         var e = e || window.event;
         var nToDo = document.getElementById('new-todo'); 
-        if(e.keyCode == 13 && nToDo.value != ''){ 
+        if (e.keyCode == 13 && nToDo.value != '') { 
           var oToDo = document.createElement('input');
           var check_oToDo = document.createElement('input');
           var divWrap = document.createElement('div');
@@ -101,6 +131,9 @@
           divWrap.appendChild(oToDo);
           var Main = document.getElementById("f-main");
           Main.appendChild(divWrap);
+
+          var todo = new Todo(oToDo.value);
+          todos.push(todo);
         }
         countItems();
       } 
@@ -111,6 +144,9 @@
           if(a[i].checked){
             let a_parent = a[i].parentNode;
             a_parent.parentNode.removeChild(a_parent);
+
+            todos.splice(i,1);
+
             n--;  //a的长度随着removeChild操作而逐渐减少，数组中各元素在数组中的位置也会随着变化。
             i--;
           }
@@ -122,6 +158,7 @@
         var n = a.length;
         for(let i =0;i < n;i++) {
           a[i].checked = true;
+          todos[i].state = true;
         }
       }
       function countItems(){
@@ -132,6 +169,7 @@
           if(a[i].checked == false){
             count++;
           }
+          todos[i].state = a[i].checked;
         }
         var p = document.getElementById('count')
         if (count == 0){
@@ -140,6 +178,29 @@
           p.innerHTML = count + ' items left';
         }
       }
+      function finished(){
+        for (let i = 0;i < todos.length;i++) {
+          if(todos[i].state) {
+            let todo = document.createElement('input');
+            todo.type = 'text';
+            todo.value = todos[i].value;
+            var todo_parent = document.getElementById('completed');
+            todo_parent.appendChild(todo);
+          }
+        }
+      }
+      function unfinished(){
+        for (let i = 0;i < todos.length;i++) {
+          if(!todos[i].state) {
+            let todo = document.createElement('input');
+            todo.type = 'text';
+            todo.value = todos[i].value;
+            var todo_parent = document.getElementById('active');
+            todo_parent.appendChild(todo);
+          }
+        }
+      }
+
     </script> 
   </head> 
 
@@ -176,8 +237,13 @@
             <input type="button" name="delete" onclick="deleteAll()" value="Clear completed">
           </li>
         </ul>
-      </footer>  
-    </section> 
+      </footer>
+      <button onclick="finished()">已完成</button>  
+      <div id='completed'></div>
+      <button onclick='unfinished()'>未完成</button>
+      <div id='active'></div>
+    </section>
+
   </body> 
                 
 
