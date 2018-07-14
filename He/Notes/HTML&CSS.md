@@ -232,3 +232,13 @@
 今日份书本的学习直接上mindMap了,然后我把问题提在Q2.md了
 
 ![mindmap](./mindMap/HTML5stage1.png)
+
+## 7.11 完全在写demo 没有产出
+
+## 7.12  
+
+知识点： canvas media inH5
+
+![image](./mindMap/canvasInH5.png)
+
+![image](./mindMap/HTML5stage2.png)
