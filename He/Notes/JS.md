@@ -1,7 +1,6 @@
 # 工地中的红宝石-JS高级程序设计
 
 
-
 ![image](./mindMap/JSstage1.png)
 
 ![image](./mindMap/JSstage2.png)
