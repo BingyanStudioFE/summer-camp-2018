@@ -91,7 +91,6 @@
         oToDo.className = 'old-todo';
         check_oToDo.className = 'check-todo';
 
-        //oToDo.addEventListener('keypress', changePress, false);
         oToDo.addEventListener('keydown', changePress, false);
         check_oToDo.addEventListener('click', changeClick, false);
 
@@ -115,22 +114,18 @@
         }
       }
       function changePress(e) {
-        //e = e || window.event;
         var todo = document.activeElement;
         var nInput = document.getElementsByClassName('new-todo')[0];
         var parent = todo.parentElement;
         if (e.keyCode == 13 && todo.value != '') {
           nInput.focus();
-        } else if (e.keyCode == 13 && todo.value == '') {
-          parent.parentNode.removeChild(parent);
-          nInput.focus();
-        } else if (e.keyCode == 8 && todo.value == '') {
+        } else if ((e.keyCode == 13 && todo.value == '') || (e.keyCode == 8 && todo.value == '')) {
           parent.parentNode.removeChild(parent);
           nInput.focus();
         }
       }
       function changeClick() {
-
+        countItems();
       }
       function countItems() {
         var checkList = document.getElementsByClassName("check-todo");
@@ -142,6 +137,9 @@
           }
           todos[i].state = checkList[i].checked;
         }
+        return changeP(count);
+      }
+      function changeP(count) {
         var p = document.getElementsByClassName('count')[0];
         if (count == 0){
           p.innerHTML = '0 item left';
@@ -196,3 +194,4 @@
                 
 
 </html>
+
