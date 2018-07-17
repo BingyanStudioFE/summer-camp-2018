@@ -50,7 +50,5 @@ axios.get('http://api01.bitspaceman.com:8000/book/douban?apikey=<您自己的api
 
 5. postMessage 这个我有点疑惑，需要同时打开两个页面才能去实现跨域，不是会对用户很不友好吗？？
 
-    
-
 
 
