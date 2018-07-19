@@ -1,0 +1,33 @@
+.carousel-figure {
+  position: relative;
+  height: 460px;
+}
+
+.carousel-figure-nav {
+  position: absolute;
+  height: 100%;
+  width: 234px;
+}
+
+.carousel-figure-nav ul {
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-figure-nav a {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 10px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.carousel-figure-nav a:hover {
+  background-color: #ff6700;
+}
+
+.carousel-figure-image {
+  width: 100%;
+}

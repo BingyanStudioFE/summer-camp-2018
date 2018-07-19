@@ -1,0 +1,100 @@
+.nav-menu {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.nav-menu-left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu-logo {
+  margin-right: 179px;
+  margin-top: 22px;
+  width: 55px;
+  height: 55px;
+  background: url(https://s01.mifile.cn/i/logo-footer.png?v2) no-repeat 50% 50%;
+}
+
+.nav-menu-logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-menu-main {
+  width: 678px;
+  display: flex;
+  font-size: 16px;
+}
+
+.nav-menu-main a {
+  display: block;
+  color: #000;
+  padding: 38px 10px;
+}
+
+.nav-menu-main a:hover {
+  color: #ff6700;
+}
+
+.nav-menu-search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-menu-search-bar input {
+  width: 245px;
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  line-height: 48px;
+  outline: none;
+}
+
+.nav-menu-search-bar:hover input,
+.nav-menu-search-bar:hover button {
+  border: 1px solid #b0b0b0;
+}
+
+.nav-menu-search-bar button {
+  z-index: 2;
+  width: 52px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  border-left: none !important;
+  background: #fff;
+  cursor: pointer;
+}
+
+.nav-menu-search-bar input:focus,
+.nav-menu-search-bar input:focus+button {
+  border: 1px solid #ff6700;
+}
+
+.nav-menu-search-bar input:focus~.search-keyword {
+  display: none;
+}
+
+.search-keyword {
+  position: absolute;
+  right: 62px;
+}
+
+.search-keyword a {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0 5px;
+  font-size: 12px;
+  background: #eee;
+  color: #757575;
+  transition: .2s
+}
+
+.search-keyword a:hover {
+  background: #ff6700;
+  color: #fff;
+}

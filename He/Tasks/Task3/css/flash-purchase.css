@@ -1,0 +1,108 @@
+.flash-purchase {
+  margin-top: 25px;
+  padding-bottom: 40px;
+}
+
+.flash-body {
+  display: flex;
+  overflow: hidden;
+}
+
+.flash-item {
+  height: 340px;
+  width: 234px;
+  padding-top: 40px;
+  margin-right: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.flash-item-1 {
+  border-top:1px solid #ff6700;
+}
+
+.time-title {
+  font-size: 21px;
+  color: #ef3a3b;
+  padding-top: 15px;
+}
+
+.time-counter {
+  border-top: 1px solid #ef3a3b;
+  background: #f1eded;
+  text-align: center;
+}
+
+.time-counter img {
+  color: #ef3a3b;
+  margin: 25px auto;
+  height: 53px;
+}
+
+.time-counter span {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 15px;
+}
+
+.time-num {
+  width: 168px;
+  margin: 28px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.time-num span,
+.time-num-box {
+  height: 46px;
+  line-height: 46px;
+  font-size: 28px;
+}
+
+.time-num-box {
+  background: #605751;
+  width: 46px;
+  color: #fff;
+}
+
+.time-num span {
+  width: 15px;
+}
+
+.flash-list ul {
+  display: flex;
+}
+
+.flash-list {
+  overflow: hidden;
+  width: 992px;
+}
+
+.nav-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.flash-item-content img {
+  width: 160px;
+  margin: 0 auto 22px;
+}
+
+.flash-item-content h3 {
+  margin: 0 20px 3px;
+}
+.flash-item-content>span {
+  display: block;
+  height: 18px;
+  margin: 0 20px 12px;
+
+}
+
+
+
+

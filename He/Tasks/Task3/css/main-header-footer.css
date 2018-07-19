@@ -1,0 +1,76 @@
+.main-header-footer {
+  display: flex;
+  margin-top: 15px;
+}
+
+.grid-box ul {
+  width: 234px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3px;
+  background: #5f5750;
+}
+
+.grid-box li {
+  width: 76px;
+  height: 82px;
+  padding: 0 3px;
+  position: relative;
+}
+
+.grid-box li:nth-child(1)::after,
+.grid-box li:nth-child(2)::after,
+.grid-box li:nth-child(4)::after,
+.grid-box li:nth-child(5)::after {
+  top: 6px;
+  right: 0;
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  content: "";
+  background: #665e57;
+}
+
+.grid-box li:nth-child(4)::before,
+.grid-box li:nth-child(5)::before,
+.grid-box li:nth-child(6)::before {
+  top: -1px;
+  left: 6px;
+  width: 64px;
+  height: 1px;
+  position: absolute;
+  content: "";
+  background: #665e57;
+}
+
+.grid-box a {
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-box i {
+  margin-bottom: 5px;
+}
+
+.grid-box a:hover {
+  color: #fff;
+}
+
+.adv-sm-box {
+  width: 316px;
+  height: 170px;
+  margin-left: 15px;
+  transition: box-shadow .2s linear;
+}
+
+.adv-sm-box img {
+  width: 100%;
+}
+
+.adv-sm-box:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}

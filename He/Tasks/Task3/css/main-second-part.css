@@ -1,0 +1,20 @@
+.main-second-part {
+  display: flex;
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+
+.second-part-left {
+  height: 614px;
+}
+
+.second-part-left .card {
+  margin-bottom: 14px;
+}
+
+.second-part-right ul{
+  display: flex;
+  flex-wrap: wrap;
+  width: 992px;
+}
