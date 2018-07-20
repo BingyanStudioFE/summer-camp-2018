@@ -73,12 +73,11 @@
 
       var todos = [];
 
-      //M
       function store(nToDo) {
         var todo = new ToDo(nToDo.value);
         todos.push(todo);
       }
-      //V
+
       function addInput(nToDo) {
         var formWrap = document.getElementsByClassName('list')[0];
         var oToDo = document.createElement('input');
@@ -103,7 +102,7 @@
           todo[todo.length-1].value = nToDo.value;
           nToDo.value = '';
       }
-      //C
+
       function enterPress(e) {
         var nToDo = document.getElementsByClassName('new-todo')[0];
         if (e.keyCode == 13 && nToDo.value != '') {
@@ -131,7 +130,7 @@
         var checkList = document.getElementsByClassName("check-todo");
         var len = checkList.length;
         var count = 0;
-        for (let i =0;i < len;i++) {
+        for (let i =0; i < len; i++) {
           if(checkList[i].checked == false){
             count++;
           }
@@ -145,6 +144,31 @@
           p.innerHTML = '0 item left';
         }else {
           p.innerHTML = count + ' items left';
+        }
+      }
+
+      function deleteAll(){
+        var checkList = document.getElementsByClassName("check-todo");
+        var len = checkList.length;
+        for (let i = 0; i < n;i++) {
+          if(a[i].checked){
+            let a_parent = a[i].parentNode;
+            a_parent.parentNode.removeChild(a_parent);
+
+            todos.splice(i,1);
+
+            n--;  //a的长度随着removeChild操作而逐渐减少，数组中各元素在数组中的位置也会随着变化。
+            i--;
+          }
+        }
+        countItems();
+      }
+      function selectAll(){
+        var a = document.getElementsByName("todo");
+        var n = a.length;
+        for(let i =0;i < n;i++) {
+          a[i].checked = true;
+          todos[i].state = true;
         }
       }
     </script> 
