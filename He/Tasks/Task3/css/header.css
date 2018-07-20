@@ -1,0 +1,57 @@
+.nav-bar {
+  z-index: 30;
+  height: 40px;
+  font-size: 12px;
+  background: #333;
+}
+
+.nav-bar-wrap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  line-height: 40px;
+  height: 40px;
+}
+
+.nav-bar-wrap a {
+  color: #b0b0b0;
+}
+
+.nav-bar-wrap a:hover {
+  color: #fff;
+}
+
+.interval {
+  margin: 0 .5em;
+  color: #424242;
+}
+
+.nav-bar-right {
+  display: flex;
+}
+
+.nav-bar-cart {
+  margin-left: 15px;
+  width: 120px;
+  background: #424242;
+  text-align: center;
+}
+
+.nav-bar-cart a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar-cart div {
+  margin-left: 5px;
+}
+
+.nav-bar-cart:hover {
+  background: #fff;
+}
+
+.nav-bar-cart:hover a {
+  color: #ff6700;
+}
