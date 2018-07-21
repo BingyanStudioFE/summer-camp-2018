@@ -7,7 +7,7 @@ const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const koaJwt = require('koa-jwt');
 const {
-    jwtConfig
+  jwtConfig
 } = require('./config');
 
 const index = require('./routes/index');
@@ -19,33 +19,33 @@ onerror(app);
 
 // middlewares
 app.use(bodyparser({
-    enableTypes: ['json', 'form', 'text']
+  enableTypes: ['json', 'form', 'text']
 }));
 app.use(json());
 app.use(logger());
 app.use(require('koa-static')(__dirname + '/public'));
 
 app.use(views(__dirname + '/views', {
-    extension: 'pug'
+  extension: 'pug'
 }));
 
 
 //judge whether author is need or not 
 app.use(koaJwt({
-    secret: jwtConfig.secret
+  secret: jwtConfig.secret
 }).unless(ctx => {
-    if (ctx.request.url.match(/\/api/) && !ctx.request.url.match(/\/login/) && !ctx.request.url.match(/\/public/)) {
-        return false;
-    }
-    return true;
+  if (ctx.request.url.match(/\/api/) && !ctx.request.url.match(/\/login/) && !ctx.request.url.match(/\/public/)) {
+    return false;
+  }
+  return true;
 }));
 
 // logger
 app.use(async (ctx, next) => {
-    const start = new Date();
-    await next();
-    const ms = new Date() - start;
-    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+  const start = new Date();
+  await next();
+  const ms = new Date() - start;
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
 // routes
@@ -55,7 +55,7 @@ app.use(index.routes(), index.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {
-    console.error('server error', err, ctx);
+  console.error('server error', err, ctx);
 });
 
 module.exports = app;
