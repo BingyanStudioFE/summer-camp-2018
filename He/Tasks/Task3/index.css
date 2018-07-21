@@ -5,7 +5,6 @@
 @import url(./css/carousel-figure.css);
 @import url(./css/main-first-part.css);
 @import url(./css/main-second-part.css);
-
 * {
   padding: 0;
   margin: 0;
@@ -31,12 +30,16 @@ body {
   text-align: center;
 }
 
-.card-item h3{
+.card-item h3 {
   font-size: 14px;
   font-weight: 400;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.card-item h3>a {
+  color: #000;
 }
 
 .card-item span {
@@ -61,31 +64,77 @@ body {
 
 .card:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  transform: translate3d(0,-2px,0) 
+  transform: translate3d(0, -2px, 0)
 }
 
-.price span,.price del{
+.price span,
+.price del {
   font-size: 14px;
 }
 
 .price span {
-  color:#ff6700;
+  color: #ff6700;
 }
 
 .price del {
-  color:#b0b0b0;
+  color: #b0b0b0;
 }
-
 
 .main-body {
   background: #f5f5f5;
 }
 
-
 .adv-foot {
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .adv-foot img {
   width: 100%;
+}
+
+.last-card-body {
+  height: 143px;
+  padding-top: 35px;
+  width: 234px;
+  margin-bottom: 14px;
+  margin-left: 14px;
+  background: #fff;
+  display: flex;
+}
+
+.last-card-body .card-item {
+  margin-left: 30px;
+  text-align: left;
+  width: 94px;
+}
+
+.last-card-more {
+  margin-left:  30px;
+}
+
+.last-card-more a {
+  color: #000;
+  font-size: 18px;
+  display: block
+}
+
+.last-card-more span {
+  font-size: 12px;
+  color: #757575;
+  display: block;
+}
+
+.last-card-more-logo {
+  margin-left: 50px; 
+}
+
+.last-card-more-logo a{
+  color: #ff6700;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.last-card-more-logo i {
+  font-size: 50px;
 }
