@@ -117,5 +117,6 @@ grid-template-areas:
 
 这就是Grid布局
 
-具体的属性介绍看[这里](http://www.css88.com/archives/8510)
-[demo](../Tasks/NoteTasks/HTML&CSS/Grid.html)
+具体的属性介绍看[这里](http://www.css88.com/archives/8510)  
+
+[demo](../Tasks/NoteTasks/HTML26%CSS/Grid.html)
