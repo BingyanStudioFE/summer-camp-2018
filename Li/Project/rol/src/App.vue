@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style>
-
+  *{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 30px;
+  }
 </style>
