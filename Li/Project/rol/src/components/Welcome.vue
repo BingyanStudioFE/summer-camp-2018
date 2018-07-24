@@ -8,14 +8,14 @@
     </transition>
     <transition name="fade">
       <div class="signin" v-if="open">
-        <form action="/server" method="get" target="blank" class="form">
+        <form action="" method="get" target="blank" class="form">
           <table>
             <tr>
               <td>
                 <span>Ai名:</span>
               </td>
               <td>
-                <input type="text" name="username" max="9" class="text">
+                <input type="text" name="username" max="9" class="text" autocomplete="on">
               </td>
             </tr>
             <tr>
@@ -23,7 +23,7 @@
                 <span>密码:</span>
               </td>
               <td>
-                <input type="password" name="password" max="9" class="text">
+                <input type="password" name="password" max="9" class="text" autocomplete="on">
               </td>
             </tr>
           </table>
@@ -47,8 +47,8 @@ export default {
   methods: {
     handleClick () {
       this.$router.push({
-        path: '/Home',
-        name: 'Home',
+        path: '/Home/Nav',
+        name: 'Nav',
         params: {
           username: ''
         }
@@ -70,8 +70,9 @@ export default {
       .form
         display:flex
         flex-direction :column
+        font-size :.7rem
         table
-          border-spacing: .5rem
+          border-spacing: .6rem
           td
             text-align :justify
         .load
@@ -84,19 +85,20 @@ export default {
           line-height :1.8rem
           background:#fff
         .text
-          padding:0 .5rem
-          width :9rem
-          heigh :1.4rem
-          line-height 1.4rem
+          padding:.1rem .5rem
+          width :6.3rem
+          heigh :1rem
+          line-height .8rem
           border :solid 1px blue
           border-radius:.2rem
     .content
       display:flex
       flex-direction :column
+      align-items: center
       margin-top :-2rem
       position :absolute
       .welcome
-        margin-top :-20px
+        margin-top :-1rem
         font-size :2.2rem
       .a1
         color :blue
