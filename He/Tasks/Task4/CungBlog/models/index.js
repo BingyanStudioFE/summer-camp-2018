@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { authConfig } = require("./config");
 mongoose.Promise = require("bluebird");
 
 mongoose.connect(
@@ -6,10 +7,7 @@ mongoose.connect(
   {
     authSource: "admin",
     useNewUrlParser: true,
-    auth: {
-      user: "root",
-      password: "Hejianchong"
-    }
+    auth: authConfig
   }
 );
 
