@@ -1,6 +1,6 @@
 <template>
   <div class="collections">
-    {{w}}
+    <div class="head"></div>
   </div>
 </template>
 
@@ -10,22 +10,19 @@ export default {
   name: 'Collections',
   data () {
     return {
-      dataType: null,
-      w: null
+      dataType: null
     }
   },
   methods: {
     getParams () {
       this.dataType = this.$route.params.name
-    },
-    getInfo () {
-      axios.get('static/mock/index.json').then((res) => {
-        this.w = res.data.name
+      axios.get('/api/index.json').then((res) => {
+        console.log(res.data.name)
       })
     }
   },
   mounted: function () {
-    this.getInfo()
+    this.getParams()
   }
 }
 </script>

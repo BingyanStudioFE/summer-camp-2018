@@ -27,7 +27,7 @@ export default {
       cheap: '最实惠',
       newones: '新品类',
       others: '有好货',
-      more: '更多分类'
+      more: '总览'
     }
   },
   methods: {
@@ -45,6 +45,26 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @keyframes moveup{
+    from{transform :translateY(100%)}
+    to{transform: translateY(0)}
+  }
+  @keyframes movedown{
+    from{transform :translateY(-100%)}
+    to{transform: translateY(0)}
+  }
+  @keyframes moveleft{
+    from{transform :translateX(100%)}
+    to{transform: translateX(0)}
+  }
+  @keyframes moveright{
+    from{transform :translateX(-100%)}
+    to{transform: translateX(0)}
+  }
+  @keyframes moveout{
+    from{opacity :0}
+    to{opacity :1}
+  }
   .nav
     position: absolute
     width: 100%
@@ -61,16 +81,31 @@ export default {
     .hot
       grid-area: h
       background: rgba(200,0,0,.7)
+      animation-name: moveup
+      animation-duration :2s
+      animation-timing-function :ease-out
     .cheap
       grid-area: c
       background: rgba(0,200,0,.7)
+      animation-name: moveright
+      animation-duration :2s
+      animation-timing-function :ease-out
     .newones
       grid-area: n
       background: rgba(200,200,0,.7)
+      animation-name: moveleft
+      animation-duration :2s
+      animation-timing-function :ease-out
     .others
       grid-area: o
       background: rgba(200,0,200,.7)
+      animation-name: movedown
+      animation-duration :2s
+      animation-timing-function :ease-out
     .more
       grid-area: m
       background: rgba(0,200,200,0.3)
+      animation-name: moveout
+      animation-duration :2s
+      animation-timing-function :ease-out
 </style>
