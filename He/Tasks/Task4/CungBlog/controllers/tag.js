@@ -1,9 +1,7 @@
-const models = require('../models');
+const models = require("../models");
 
 const createTag = async (ctx, next) => {
-  let {
-    tags
-  } = ctx.request.body;
+  let { tags } = ctx.request.body;
   try {
     let oldTags = await models.Tag.find({
       name: {
@@ -23,38 +21,37 @@ const createTag = async (ctx, next) => {
   } catch (err) {
     console.log(err);
   }
-
 };
 
 const updateTag = async (ctx, next) => {
-  const {
-    tag,
-    _id
-  } = ctx.request.body;
+  const { tag, _id } = ctx.request.body;
   try {
-    await models.Tag.updateOne({
-      _id
-    }, tag).exec();
+    await models.Tag.updateOne(
+      {
+        _id
+      },
+      tag
+    ).exec();
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
   }
 };
 
-
 const deleteTag = async (ctx, next) => {
-  const {
-    _ids
-  } = ctx.request.body;
+  const { _ids } = ctx.request.body;
   try {
     await Promise.all([
-      models.Blog.updateMany({}, {
-        $pull: {
-          tags: {
-            $in: _ids
+      models.Blog.updateMany(
+        {},
+        {
+          $pull: {
+            tags: {
+              $in: _ids
+            }
           }
         }
-      }).exec(),
+      ).exec(),
       models.Tag.deleteMany({
         _id: {
           $in: _ids
@@ -85,5 +82,5 @@ module.exports = {
   createTag,
   updateTag,
   deleteTag,
-  getTagList,
+  getTagList
 };

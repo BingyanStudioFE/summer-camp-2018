@@ -1,10 +1,10 @@
-const models = require('../models');
-
+const models = require("../models");
 
 const createCategory = async (ctx, next) => {
   let category = ctx.request.body;
   try {
-    if (category.parent) {  //create child categroy
+    if (category.parent) {
+      //create child categroy
       const parentCategory = await models.Category.findById(category.parent);
       if (parentCategory && !parentCategory.parent) {
         const categories = await models.Category.find({
@@ -20,7 +20,8 @@ const createCategory = async (ctx, next) => {
           ctx.body.data.category = result;
         }
       }
-    } else { //create parent category
+    } else {
+      //create parent category
       const categories = await models.Category.find(category);
       if (categories.length === 0) {
         const newCategory = new models.Category(category);
@@ -34,20 +35,20 @@ const createCategory = async (ctx, next) => {
   }
 };
 
-
 const deleteCategory = async (ctx, next) => {
-  const {
-    _ids
-  } = ctx.request.body;
+  const { _ids } = ctx.request.body;
   try {
     await Promise.all([
-      models.Blog.updateMany({}, {
-        $pull: {
-          category: {
-            $in: _ids
+      models.Blog.updateMany(
+        {},
+        {
+          $pull: {
+            category: {
+              $in: _ids
+            }
           }
         }
-      }).exec(),
+      ).exec(),
       models.Category.deleteMany({
         _id: {
           $in: _ids
@@ -61,14 +62,14 @@ const deleteCategory = async (ctx, next) => {
 };
 
 const updateCategory = async (ctx, next) => {
-  const {
-    _id,
-    category
-  } = ctx.request.body;
+  const { _id, category } = ctx.request.body;
   try {
-    await models.Category.updateOne({
-      _id
-    }, category).exec();
+    await models.Category.updateOne(
+      {
+        _id
+      },
+      category
+    ).exec();
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
@@ -77,9 +78,7 @@ const updateCategory = async (ctx, next) => {
 
 //TODO:sort by Others
 const getCategoryList = async (ctx, next) => {
-  const {
-    parent
-  } = ctx.request.query;
+  const { parent } = ctx.request.query;
   let categories = null;
   try {
     const sortOptions = {
@@ -87,18 +86,24 @@ const getCategoryList = async (ctx, next) => {
         create_time: -1
       }
     };
-    categories = await models.Category.find({
-      parent
-    }, null, sortOptions);
-    await Promise.all(categories.map(async (category, index, array) => {
-      let count = await models.Blog.countDocuments({
-        category: {
-          $in: category._id
-        }
-      });
-      array[index] = array[index].toObject();
-      array[index].blog_count = count;
-    }));
+    categories = await models.Category.find(
+      {
+        parent
+      },
+      null,
+      sortOptions
+    );
+    await Promise.all(
+      categories.map(async (category, index, array) => {
+        let count = await models.Blog.countDocuments({
+          category: {
+            $in: category._id
+          }
+        });
+        array[index] = array[index].toObject();
+        array[index].blog_count = count;
+      })
+    );
     ctx.body.data.categories = categories;
     ctx.body.data.success = 1;
   } catch (err) {

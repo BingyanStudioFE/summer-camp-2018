@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "babel-eslint": "^8.2.6",
-<<<<<<< HEAD
     "bluebird": "^3.5.1",
-=======
->>>>>>> e66bc96c4482cd6055804340272b8757cf2406c0
     "debug": "^2.6.3",
     "jsonwebtoken": "^8.3.0",
     "koa": "^2.2.0",

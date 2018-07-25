@@ -1,9 +1,7 @@
-const models = require('../models');
+const models = require("../models");
 
 const createBlog = async (ctx, next) => {
-  const {
-    blog
-  } = ctx.request.body;
+  const { blog } = ctx.request.body;
   try {
     let newBlog = new models.Blog(blog);
     const result = await newBlog.save();
@@ -15,14 +13,14 @@ const createBlog = async (ctx, next) => {
 };
 
 const updateBlog = async (ctx, next) => {
-  const {
-    blog,
-    _id
-  } = ctx.request.body;
+  const { blog, _id } = ctx.request.body;
   try {
-    await models.Blog.update({
-      _id
-    }, blog).exec();
+    await models.Blog.update(
+      {
+        _id
+      },
+      blog
+    ).exec();
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
@@ -30,9 +28,7 @@ const updateBlog = async (ctx, next) => {
 };
 
 const deleteBlog = async (ctx, next) => {
-  const {
-    _ids
-  } = ctx.request.body;
+  const { _ids } = ctx.request.body;
   try {
     await models.Comment.deleteMany({
       blog_id: {
@@ -51,42 +47,48 @@ const deleteBlog = async (ctx, next) => {
 };
 
 const getBlogDetail = async (ctx, next) => {
-  const {
-    id
-  } = ctx.params;
+  const { id } = ctx.params;
   try {
     const result = await models.Blog.findById(id);
     if (!ctx.headers.authorization) {
       const tagsId = result.tags.map(v => v._id);
       const categoryId = result.category.map(v => v._id);
-      await models.Tag.updateMany({
-        _id: {
-          $in: tagsId
+      await models.Tag.updateMany(
+        {
+          _id: {
+            $in: tagsId
+          }
+        },
+        {
+          $inc: {
+            read_count: 1
+          }
         }
-      }, {
-        $inc: {
-          read_count: 1
+      );
+      await models.Category.updateMany(
+        {
+          _id: {
+            $in: categoryId
+          }
+        },
+        {
+          $inc: {
+            read_count: 1
+          }
         }
-      });
-      await models.Category.updateMany({
-        _id: {
-          $in: categoryId
-        }
-      }, {
-        $inc: {
-          read_count: 1
-        }
-      });
+      );
       result.read_count++;
       await result.save();
     }
-    await result.populate('category tags', 'name read_count _id create_time parent').execPopulate();
+    await result
+      .populate("category tags", "name read_count _id create_time parent")
+      .execPopulate();
     const comments = await models.Comment.find({
       blog_id: id,
       comment_to: {
         $eq: null
       }
-    }).populate('children');
+    }).populate("children");
     const comment_count = await models.Comment.countDocuments({
       blog_id: id
     });
@@ -102,8 +104,14 @@ const getBlogDetail = async (ctx, next) => {
 const getBlogList = async (ctx, next) => {
   try {
     let query = queryProcess(ctx.request.query);
-    let result = await models.Blog.find(query.conditions, null, query.options).populate('tags category', '_id name');
-    ctx.body.data.blog_count = await models.Blog.countDocuments(query.conditions);
+    let result = await models.Blog.find(
+      query.conditions,
+      null,
+      query.options
+    ).populate("tags category", "_id name");
+    ctx.body.data.blog_count = await models.Blog.countDocuments(
+      query.conditions
+    );
     ctx.body.data.blogs = result;
     ctx.body.data.success = 1;
   } catch (err) {
@@ -119,7 +127,7 @@ const queryProcess = raw => {
       sort: {
         create_time: -1
       }
-    },
+    }
   };
   if (raw.category) {
     query.conditions.category = {
@@ -128,19 +136,27 @@ const queryProcess = raw => {
   }
   if (Object.keys(raw).some(v => v.match(/tag/))) {
     let tags = [];
-    Object.keys(raw).filter(v => v.match(/tag/)).forEach(tag => tags.push(raw[tag]));
+    Object.keys(raw)
+      .filter(v => v.match(/tag/))
+      .forEach(tag => tags.push(raw[tag]));
     query.conditions.tags = {
       $all: tags
     };
   }
   if (raw.keyword) {
-    raw.keyword = raw.keyword.replace(/([\^\$\(\)\*\+\?\.\\\|\[\]\{\}])/g, '\\$1');
-    const keyword = new RegExp(raw.keyword, 'mg');
-    query.conditions.$or = [{
-      content: keyword
-    }, {
-      title: keyword
-    }];
+    raw.keyword = raw.keyword.replace(
+      /([\^\$\(\)\*\+\?\.\\\|\[\]\{\}])/g,
+      "\\$1"
+    );
+    const keyword = new RegExp(raw.keyword, "mg");
+    query.conditions.$or = [
+      {
+        content: keyword
+      },
+      {
+        title: keyword
+      }
+    ];
   }
   if (raw.skip) {
     query.options.skip = parseInt(raw.skip);
@@ -149,23 +165,28 @@ const queryProcess = raw => {
     query.options.limit = parseInt(raw.limit);
   }
   if (raw.order) {
-    let order = [{
-      update_time: -1
-    }, {
-      update_time: 1
-    }, {
-      read_count: -1
-    }, {
-      read_count: 1
-    }][raw.order];
+    let order = [
+      {
+        update_time: -1
+      },
+      {
+        update_time: 1
+      },
+      {
+        read_count: -1
+      },
+      {
+        read_count: 1
+      }
+    ][raw.order];
     query.options.sort = order;
   }
-  if(raw.start_time) {
-    query.conditions.update_time =  query.conditions.update_time || {};
+  if (raw.start_time) {
+    query.conditions.update_time = query.conditions.update_time || {};
     query.conditions.update_time.$gte = Date(raw.start_time);
   }
-  if(raw.end_time) {
-    query.conditions.update_time =  query.conditions.update_time || {};
+  if (raw.end_time) {
+    query.conditions.update_time = query.conditions.update_time || {};
     query.conditions.update_time.$lte = Date(raw.end_time);
   }
   return query;

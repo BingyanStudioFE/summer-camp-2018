@@ -1,59 +1,56 @@
-const models = require('../models');
+const models = require("../models");
 
 const createComment = async (ctx, next) => {
-  const {
-    comment
-  } = ctx.request.body;
+  const { comment } = ctx.request.body;
   const newComment = new models.Comment(comment);
   try {
     await models.Blog.findById(comment.blog_id);
     const result = await newComment.save();
     if (comment.comment_to) {
-      await models.Comment.update({
-        _id: comment.comment_to
-      }, {
-        $push: {
-          children: result._id
+      await models.Comment.update(
+        {
+          _id: comment.comment_to
+        },
+        {
+          $push: {
+            children: result._id
+          }
         }
-      });
+      );
     }
     ctx.body.data.comment = result;
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
   }
-
 };
 
 const deleteComment = async (ctx, next) => {
-  const {
-    _ids
-  } = ctx.request.body;
+  const { _ids } = ctx.request.body;
   try {
     await models.Comment.deleteMany({
       _id: {
         $in: _ids
       }
     });
-    await models.Comment.updateMany({}, {
-      $pull: {
-        children: {
-          $in: _ids
+    await models.Comment.updateMany(
+      {},
+      {
+        $pull: {
+          children: {
+            $in: _ids
+          }
         }
       }
-    });
+    );
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
   }
 };
 
-
 const getCommentList = async (ctx, next) => {
-  const {
-    skip,
-    limit
-  } = ctx.request.query;
+  const { skip, limit } = ctx.request.query;
   try {
     const comments = await models.Comment.find(null, null, {
       sort: {
@@ -70,7 +67,6 @@ const getCommentList = async (ctx, next) => {
     console.log(err);
   }
 };
-
 
 module.exports = {
   createComment,

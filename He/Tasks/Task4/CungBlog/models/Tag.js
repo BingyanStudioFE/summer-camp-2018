@@ -1,7 +1,5 @@
-const mongoose = require('mongoose');
-const {
-  ObjectId
-} = mongoose.Schema.Types;
+const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema.Types;
 
 const tagSchema = new mongoose.Schema({
   name: String,
@@ -16,8 +14,8 @@ const tagSchema = new mongoose.Schema({
   read_count: {
     type: Number,
     default: 0
-  },
+  }
 });
 
-const Tag = mongoose.model('Tag', tagSchema);
+const Tag = mongoose.model("Tag", tagSchema);
 module.exports = Tag;
