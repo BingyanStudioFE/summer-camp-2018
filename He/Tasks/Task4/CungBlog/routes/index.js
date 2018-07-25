@@ -1,19 +1,12 @@
 const router = require("koa-router")();
 
 router.get("/", async (ctx, next) => {
-  await ctx.render("index", {
-    title: "Hello Koa 2!"
-  });
+  await ctx.render("index", { title: "Hello Koa 2!" });
 });
 
 router.all("*", async (ctx, next) => {
   ctx.status = 404;
-  ctx.body = {
-    status: 404,
-    data: {
-      success: 0
-    }
-  };
+  ctx.body = { status: 404, data: { success: 0 } };
 });
 
 module.exports = router;

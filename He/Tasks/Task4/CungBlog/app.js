@@ -15,26 +15,16 @@ const api = require("./routes/api");
 onerror(app);
 
 // middlewares
-app.use(
-  bodyparser({
-    enableTypes: ["json", "form", "text"]
-  })
-);
+app.use(bodyparser({ enableTypes: ["json", "form", "text"] }));
 app.use(json());
 app.use(logger());
 app.use(require("koa-static")(__dirname + "/public"));
 
-app.use(
-  views(__dirname + "/views", {
-    extension: "pug"
-  })
-);
+app.use(views(__dirname + "/views", { extension: "pug" }));
 
 //judge whether author is need or not
 app.use(
-  koaJwt({
-    secret: jwtConfig.secret
-  }).unless(ctx => {
+  koaJwt({ secret: jwtConfig.secret }).unless(ctx => {
     if (
       ctx.request.url.match(/\/api/) &&
       !ctx.request.url.match(/\/login/) &&

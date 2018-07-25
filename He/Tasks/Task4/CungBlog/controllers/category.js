@@ -7,9 +7,7 @@ const createCategory = async (ctx, next) => {
       //create child categroy
       const parentCategory = await models.Category.findById(category.parent);
       if (parentCategory && !parentCategory.parent) {
-        const categories = await models.Category.find({
-          name: category.name
-        });
+        const categories = await models.Category.find({ name: category.name });
         if (categories.length === 0) {
           const newCategory = new models.Category({
             name: category.name,
@@ -39,21 +37,8 @@ const deleteCategory = async (ctx, next) => {
   const { _ids } = ctx.request.body;
   try {
     await Promise.all([
-      models.Blog.updateMany(
-        {},
-        {
-          $pull: {
-            category: {
-              $in: _ids
-            }
-          }
-        }
-      ).exec(),
-      models.Category.deleteMany({
-        _id: {
-          $in: _ids
-        }
-      }).exec()
+      models.Blog.updateMany({}, { $pull: { category: { $in: _ids } } }).exec(),
+      models.Category.deleteMany({ _id: { $in: _ids } }).exec()
     ]);
     ctx.body.data.success = 1;
   } catch (err) {
@@ -64,41 +49,23 @@ const deleteCategory = async (ctx, next) => {
 const updateCategory = async (ctx, next) => {
   const { _id, category } = ctx.request.body;
   try {
-    await models.Category.updateOne(
-      {
-        _id
-      },
-      category
-    ).exec();
+    await models.Category.updateOne({ _id }, category).exec();
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
   }
 };
 
-//TODO:sort by Others
 const getCategoryList = async (ctx, next) => {
   const { parent } = ctx.request.query;
   let categories = null;
   try {
-    const sortOptions = {
-      sort: {
-        create_time: -1
-      }
-    };
-    categories = await models.Category.find(
-      {
-        parent
-      },
-      null,
-      sortOptions
-    );
+    const sortOptions = { sort: { create_time: -1 } };
+    categories = await models.Category.find({ parent }, null, sortOptions);
     await Promise.all(
       categories.map(async (category, index, array) => {
         let count = await models.Blog.countDocuments({
-          category: {
-            $in: category._id
-          }
+          category: { $in: category._id }
         });
         array[index] = array[index].toObject();
         array[index].blog_count = count;

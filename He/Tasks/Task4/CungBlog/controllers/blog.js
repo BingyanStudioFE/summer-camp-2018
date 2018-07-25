@@ -15,12 +15,7 @@ const createBlog = async (ctx, next) => {
 const updateBlog = async (ctx, next) => {
   const { blog, _id } = ctx.request.body;
   try {
-    await models.Blog.update(
-      {
-        _id
-      },
-      blog
-    ).exec();
+    await models.Blog.update({ _id }, blog).exec();
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
@@ -30,16 +25,8 @@ const updateBlog = async (ctx, next) => {
 const deleteBlog = async (ctx, next) => {
   const { _ids } = ctx.request.body;
   try {
-    await models.Comment.deleteMany({
-      blog_id: {
-        $in: _ids
-      }
-    }).exec();
-    await models.Blog.deleteMany({
-      _id: {
-        $in: _ids
-      }
-    }).exec();
+    await models.Comment.deleteMany({ blog_id: { $in: _ids } }).exec();
+    await models.Blog.deleteMany({ _id: { $in: _ids } }).exec();
     ctx.body.data.success = 1;
   } catch (err) {
     console.log(err);
@@ -54,28 +41,12 @@ const getBlogDetail = async (ctx, next) => {
       const tagsId = result.tags.map(v => v._id);
       const categoryId = result.category.map(v => v._id);
       await models.Tag.updateMany(
-        {
-          _id: {
-            $in: tagsId
-          }
-        },
-        {
-          $inc: {
-            read_count: 1
-          }
-        }
+        { _id: { $in: tagsId } },
+        { $inc: { read_count: 1 } }
       );
       await models.Category.updateMany(
-        {
-          _id: {
-            $in: categoryId
-          }
-        },
-        {
-          $inc: {
-            read_count: 1
-          }
-        }
+        { _id: { $in: categoryId } },
+        { $inc: { read_count: 1 } }
       );
       result.read_count++;
       await result.save();
@@ -85,13 +56,9 @@ const getBlogDetail = async (ctx, next) => {
       .execPopulate();
     const comments = await models.Comment.find({
       blog_id: id,
-      comment_to: {
-        $eq: null
-      }
+      comment_to: { $eq: null }
     }).populate("children");
-    const comment_count = await models.Comment.countDocuments({
-      blog_id: id
-    });
+    const comment_count = await models.Comment.countDocuments({ blog_id: id });
     ctx.body.data.comment_count = comment_count;
     ctx.body.data.blog = result;
     ctx.body.data.comments = comments;
@@ -123,25 +90,17 @@ const queryProcess = raw => {
   raw = raw || {};
   let query = {
     conditions: {},
-    options: {
-      sort: {
-        create_time: -1
-      }
-    }
+    options: { sort: { create_time: -1 } }
   };
   if (raw.category) {
-    query.conditions.category = {
-      $in: raw.category
-    };
+    query.conditions.category = { $in: raw.category };
   }
   if (Object.keys(raw).some(v => v.match(/tag/))) {
     let tags = [];
     Object.keys(raw)
       .filter(v => v.match(/tag/))
       .forEach(tag => tags.push(raw[tag]));
-    query.conditions.tags = {
-      $all: tags
-    };
+    query.conditions.tags = { $all: tags };
   }
   if (raw.keyword) {
     raw.keyword = raw.keyword.replace(
@@ -149,14 +108,7 @@ const queryProcess = raw => {
       "\\$1"
     );
     const keyword = new RegExp(raw.keyword, "mg");
-    query.conditions.$or = [
-      {
-        content: keyword
-      },
-      {
-        title: keyword
-      }
-    ];
+    query.conditions.$or = [{ content: keyword }, { title: keyword }];
   }
   if (raw.skip) {
     query.options.skip = parseInt(raw.skip);

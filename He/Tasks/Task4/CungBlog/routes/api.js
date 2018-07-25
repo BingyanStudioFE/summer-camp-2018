@@ -4,11 +4,7 @@ const controller = require("../controllers");
 router.prefix("/api/v1");
 //set the json model
 router.use(async (ctx, next) => {
-  ctx.body = {
-    data: {
-      success: 0
-    }
-  };
+  ctx.body = { data: { success: 0 } };
   await next();
   ctx.body.status = ctx.response.status;
 });
