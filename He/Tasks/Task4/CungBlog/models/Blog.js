@@ -23,22 +23,15 @@ const blogSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  time: {
-    create_time: {
-      type: Date,
-      default: Date.now()
-    },
-    update_time: {
-      type: Date,
-      default: Date.now()
-    }
+  update_time: {
+    type: Date,
+    default: Date.now()
   }
 });
 
-blogSchema.pre('update', function () {
-  if (!this.isNew) {
-    this.time.update_time = Date.now();
-  }
+blogSchema.pre('update', function (next) {
+  this.set({update_time:Date.now()});
+  next();
 });
 const Blog = mongoose.model('Blog', blogSchema);
 module.exports = Blog;

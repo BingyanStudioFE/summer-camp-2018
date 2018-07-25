@@ -75,6 +75,7 @@ const updateCategory = async (ctx, next) => {
   }
 };
 
+//TODO:sort by Others
 const getCategoryList = async (ctx, next) => {
   const {
     parent

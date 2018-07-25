@@ -19,6 +19,8 @@ router.post('/user/login', controller.user.login);
 router.post('/blog',controller.blog.createBlog);
 router.put('/blog',controller.blog.updateBlog);
 router.del('/blog',controller.blog.deleteBlog);
+router.get('/public/blog/:id',controller.blog.getBlogDetail);
+router.get('/public/blogs',controller.blog.getBlogList);
 
 router.post('/category',controller.category.createCategory);
 router.put('/category',controller.category.updateCategory);
@@ -32,6 +34,6 @@ router.get('/public/tags',controller.tag.getTagList);
 
 router.post('/public/comment',controller.comment.createComment);
 router.del('/comment',controller.comment.deleteComment);
-router.get('/comment',controller.comment.getCommentList);
+router.get('/public/comment',controller.comment.getCommentList);
 
 module.exports = router;

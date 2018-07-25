@@ -5,6 +5,10 @@ const {
 
 const categorySchema = new mongoose.Schema({
   name: String,
+  introduce: {
+    type: String,
+    default: null
+  },
   parent: {
     type: ObjectId,
     ref: 'Category',
@@ -22,6 +26,7 @@ const categorySchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+
 
 });
 

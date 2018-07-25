@@ -5,17 +5,21 @@ const {
 
 
 const commentSchema = new mongoose.Schema({
+  author: String,
+  title: String,
+  content: String,
+  comment_to:{
+    type:ObjectId,
+    ref:'Comment'
+  },
   blog_id: {
     type: ObjectId,
     ref:'Blog'
   },
-  author: String,
-  comment_to: {
+  children: [{
     type:ObjectId,
     ref:'Comment',
-    default:null
-  },
-  content: String,
+  }],
   create_time: {
     type: Date,
     default: Date.now()

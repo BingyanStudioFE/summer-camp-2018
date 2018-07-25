@@ -28,6 +28,7 @@ module.exports = {
             "always"
         ],
         "no-console":"off",
-        "no-unused-vars":"off"
+        "no-unused-vars":"off",
+        "no-useless-escape":"off"
     }
 };

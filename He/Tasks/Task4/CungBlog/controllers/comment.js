@@ -8,6 +8,15 @@ const createComment = async (ctx, next) => {
   try {
     await models.Blog.findById(comment.blog_id);
     const result = await newComment.save();
+    if (comment.comment_to) {
+      await models.Comment.update({
+        _id: comment.comment_to
+      }, {
+        $push: {
+          children: result._id
+        }
+      });
+    }
     ctx.body.data.comment = result;
     ctx.body.data.success = 1;
   } catch (err) {
@@ -24,6 +33,13 @@ const deleteComment = async (ctx, next) => {
     await models.Comment.deleteMany({
       _id: {
         $in: _ids
+      }
+    });
+    await models.Comment.updateMany({}, {
+      $pull: {
+        children: {
+          $in: _ids
+        }
       }
     });
     ctx.body.data.success = 1;
@@ -53,8 +69,8 @@ const getCommentList = async (ctx, next) => {
   } catch (err) {
     console.log(err);
   }
-
 };
+
 
 module.exports = {
   createComment,
