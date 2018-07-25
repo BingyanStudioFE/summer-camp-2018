@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 mongoose.Promise = require('bluebird');
 
+=======
+>>>>>>> e66bc96c4482cd6055804340272b8757cf2406c0
 mongoose.connect('mongodb://localhost:27017/CungBlog',{
   authSource:'admin',
   useNewUrlParser:true,
@@ -9,6 +12,7 @@ mongoose.connect('mongodb://localhost:27017/CungBlog',{
     password:'Hejianchong'
   }
 });
+<<<<<<< HEAD
 
 
 const Blog = require('./Blog');
@@ -22,3 +26,10 @@ module.exports = {
   Category,
   Tag
 };
+=======
+//TODO:test
+const Cat = mongoose.model('Cat', { name: String });
+
+module.exports = {Cat};
+
+>>>>>>> e66bc96c4482cd6055804340272b8757cf2406c0
