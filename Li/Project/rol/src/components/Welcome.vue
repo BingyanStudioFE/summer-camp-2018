@@ -27,8 +27,8 @@
               </td>
             </tr>
           </table>
-          <input type="submit" value="登陆" class="load" @click='handleClick'>
         </form>
+        <button class="load" @click='handleClick'>登录</button>
       </div>
     </transition>
   </div>
@@ -50,7 +50,6 @@ export default {
         path: '/Home/Nav',
         name: 'Nav',
         params: {
-          username: ''
         }
       })
     }
@@ -67,6 +66,17 @@ export default {
     justify-content :center
     align-items :center
     .signin
+      display: flex
+      flex-direction :column
+      .load
+        flex:1
+        border :solid .7px black
+        padding:0
+        margin :5px auto
+        width:5rem
+        height :1.8rem
+        line-height :1.8rem
+        background:#fff
       .form
         display:flex
         flex-direction :column
@@ -75,15 +85,6 @@ export default {
           border-spacing: .6rem
           td
             text-align :justify
-        .load
-          flex:1
-          border :solid .7px black
-          padding:0
-          margin :5px auto
-          width:5rem
-          height :1.8rem
-          line-height :1.8rem
-          background:#fff
         .text
           padding:.1rem .5rem
           width :6.3rem
