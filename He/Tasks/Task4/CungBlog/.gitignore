@@ -1,3 +1,4 @@
 node_modules/
+models/config.js
 .vscode
 package-lock.json
